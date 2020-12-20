@@ -1,16 +1,10 @@
-const wrapProvider = require('arb-ethers-web3-bridge').wrapProvider
-const HDWalletProvider = require('@truffle/hdwallet-provider')
-const mnemonic =
-  'leg island worth fancy excuse exact travel adult blame pause erupt sad orange oven decade'
-const arbProviderUrl = 'http://127.0.0.1:8547'
-
 module.exports = {
     networks: {
         development: {
             host: 'localhost', // Localhost (default: none)
             port: 8545, // Standard Ethereum port (default: none)
             network_id: '*', // Any network (default: none)
-            gas: 10000000,
+            gas: 6721975,
         },
         coverage: {
             host: 'localhost',
@@ -20,15 +14,11 @@ module.exports = {
             gasPrice: 0x01,
         },
         arbitrum: {
-            provider: function () {
-              // return wrapped provider:
-              return wrapProvider(
-                new HDWalletProvider(mnemonic, arbProviderUrl)
-              )
-            },
-            network_id: '*',
-            gasPrice: 0,
-            gasLimit: 99999999999999
+            host: 'localhost', // Localhost (default: none)
+            port: 8547, // Standard Ethereum port (default: none)
+            network_id: '*', // Any network (default: none)
+            gas: 1000000000,
+            gasPrice: 0x01,
           },
     },
     mocha: {

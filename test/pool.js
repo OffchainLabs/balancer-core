@@ -40,7 +40,7 @@ contract('BPool', async (accounts) => {
         DAI = dai.address;
         XXX = xxx.address;
 
-        console.log("factory", factory)
+        console.log("factory", factory.address)
         console.log("WETH", WETH)
         console.log("MKR", MKR)
         console.log("DAI", DAI)
